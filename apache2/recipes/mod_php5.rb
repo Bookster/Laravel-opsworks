@@ -31,7 +31,8 @@ when 'rhel'
     # if node['platform_version'].to_f < 6.0
       # package_name 'php53'
     # else
-      package_name 'php'
+      package_name 'php56
+      '
     # end
     notifies :run, 'execute[generate-module-list]', :immediately
     not_if 'which php'
